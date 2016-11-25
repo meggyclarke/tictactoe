@@ -49,6 +49,7 @@ $(document).on('ready', function () {
             $("#TR").hasClass('orange') && $("#MM").hasClass('orange') && $("#BL").hasClass('orange'))
           {
             alert('Orange has won the game. Start a new game');
+            window.location.reload();
             $("#table tr").removeClass('orange')
             $("#table tr").removeClass('apple')
 
@@ -79,6 +80,7 @@ $(document).on('ready', function () {
              $("#BL").hasClass('apple'))
            {
           alert('Apple wins has won the game. Start a new game')
+          window.location.reload();
 
 
            $("#table tr").removeClass('orange')
@@ -98,14 +100,13 @@ $(document).on('ready', function () {
 
     });
        //
-    //    $("#reset").click(function () {
-    //        $("#table tr").text("+");
-    //        $("#table tr").removeClass('disable')
-    //        $("#table tr").removeClass('orange')
-    //        $("#table tr").removeClass('apple')
-    //        $("#table tr").removeClass('btn-primary')
-    //        $("#table tr").removeClass('btn-info')
-    //        count = 0
-    //     })
+       $("#reset").click(function () {
+
+           $("#table tr").removeClass('orange')
+           $("#table tr").removeClass('apple')
+           window.location.reload();
+
+           count = 0
+        })
 
 });
